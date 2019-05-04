@@ -1,4 +1,4 @@
-import {Loopback4SecurityApplication} from '../..';
+import {Loopback4SecurityApplication} from '../../index';
 import {
   createRestAppClient,
   givenHttpServerConfig,

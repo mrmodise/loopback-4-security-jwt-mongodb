@@ -1,5 +1,5 @@
 import {Client} from '@loopback/testlab';
-import {Loopback4SecurityApplication} from '../..';
+import {Loopback4SecurityApplication} from '../../index';
 import {setupApplication} from './test-helper';
 
 describe('HomePage', () => {

@@ -4,7 +4,5 @@
   "compilerOptions": {
     "rootDir": "src"
   },
-  "include": [
-    "packages/security/src"
-  ]
+  "include": ["src", "src/**/*.json"]
 }
