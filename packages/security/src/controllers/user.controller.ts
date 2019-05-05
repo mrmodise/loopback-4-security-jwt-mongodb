@@ -16,9 +16,7 @@ import {JWTAuthenticationService, PasswordHasher, validateCredentials} from '../
 import {JWTAuthenticationBindings, PasswordHasherBindings} from '../keys';
 import * as _ from 'lodash';
 import {Credentials} from '../repositories';
-import * as log4js from 'log4js';
-const logger = log4js.getLogger();
-logger.level = 'debug';
+import {logger} from '../helpers';
 
 export class UserController {
   constructor(
