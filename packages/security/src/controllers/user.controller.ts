@@ -56,7 +56,7 @@ export class UserController {
       },
     },
   })
-  async findById(@param.path.string('userId') userId: string): Promise<User> {
+  async findById(@param.path.string('userId') userId: string, @requestBody() token: string): Promise<User> {
     return this.userRepository.findById(userId, {
       fields: {password: false},
     });
