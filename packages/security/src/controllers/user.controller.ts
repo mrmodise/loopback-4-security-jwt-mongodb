@@ -31,12 +31,13 @@ export class UserController {
 
   @post('/users')
   async create(@requestBody() user: User): Promise<User> {
-    logger.debug(`REST request for: ${JSON.stringify(user)}`);
     validateCredentials(_.pick(user, ['email', 'password']));
     user.password = await this.passwordHahser.hashPassword(user.password);
+    logger.debug(`REST request to save User: ${JSON.stringify(user)}`);
 
     // Save & Return Result
     const savedUser = await this.userRepository.create(user);
+    logger.debug(`Saved User: ${JSON.stringify(savedUser)}`);
     delete savedUser.password;
     return savedUser;
   }
@@ -108,9 +109,11 @@ export class UserController {
     @requestBody(CredentialsRequestBody) credentials: Credentials,
   ): Promise<{token: string}> {
     validateCredentials(credentials);
+    logger.debug(`Signing in user with: ${JSON.stringify(credentials)}`);
     const token = await this.jwtAuthenticationService.getAccessTokenForUser(
       credentials,
     );
+    logger.debug(`User signed in successfully. Token: ${token}`);
     return {token};
   }
 }

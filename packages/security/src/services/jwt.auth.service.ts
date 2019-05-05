@@ -12,6 +12,7 @@ import {PasswordHasher} from './';
 const jwt = require('jsonwebtoken');
 const signAsync = promisify(jwt.sign);
 const verifyAsync = promisify(jwt.verify);
+import {logger} from '../helpers';
 
 /**
  * Constant for JWT secret string
@@ -50,6 +51,7 @@ export class JWTAuthenticationService {
       throw new HttpErrors['NotFound'](
         `User with email ${credentials.email} not found.`,
       );
+      logger.debug(`User with email ${credentials.email} not found.`);
     }
 
     const passwordMatched = await this.passwordHasher.comparePassword(
@@ -59,6 +61,7 @@ export class JWTAuthenticationService {
 
     if (!passwordMatched) {
       throw new HttpErrors.Unauthorized('The credentials are not correct.');
+      logger.debug('The credentials are not correct.');
     }
 
     const currentUser = _.pick(toJSON(foundUser), ['id', 'email', 'firstName']);
