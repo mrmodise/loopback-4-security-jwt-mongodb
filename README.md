@@ -6,9 +6,23 @@ A demo REST API application illustrating user registration and authentication wi
   a JSON Web Token (JWT) being generated with an expiry time of 300 milliseconds.
 
 ## Prerequisites
+Install the following:
 
-
+* Loopback 4
+* MongoDB
 
 ## Development
+Install the dependencies:
+
+```
+cd loopback-4-security-jwt-mongodb
+npm install 
+```
+
+Start the dev server:
+
+```
+npm start
+```
 
 [![LoopBack](https://github.com/strongloop/loopback-next/raw/master/docs/site/imgs/branding/Powered-by-LoopBack-Badge-(blue)-@2x.png)](http://loopback.io/)
