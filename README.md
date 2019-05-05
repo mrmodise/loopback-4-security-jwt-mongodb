@@ -16,7 +16,8 @@ Install the following:
 Install the dependencies:
 
 ```
-cd loopback-4-security-jwt-mongodb
+$ git clone https://github.com/mrmodise/loopback-4-security-jwt-mongodb.git
+$ cd loopback-4-security-jwt-mongodb
 $ npm install 
 ```
 
