@@ -8,8 +8,9 @@ A demo REST API application illustrating user registration and authentication wi
 ## Prerequisites
 Install the following:
 
-* Loopback 4
-* MongoDB
+* NodeJS vlatest (``https://nodejs.org/en/download/``)
+* Loopback 4 (``npm install -g @loopback/cli``)
+* MongoDB vlatest (``https://treehouse.github.io/installation-guides/``)
 
 ## Development
 Install the dependencies:
@@ -23,6 +24,11 @@ Start the dev server:
 
 ```
 npm start
+```
+
+To execute tests:
+```
+npm run test
 ```
 
 [![LoopBack](https://github.com/strongloop/loopback-next/raw/master/docs/site/imgs/branding/Powered-by-LoopBack-Badge-(blue)-@2x.png)](http://loopback.io/)
