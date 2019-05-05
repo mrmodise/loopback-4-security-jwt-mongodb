@@ -10,7 +10,7 @@ Install the following:
 
 * NodeJS vlatest (https://nodejs.org/en/download/)
 * Loopback 4 (https://v4.loopback.io/getting-started.html)
-* MongoDB vlatest (https://treehouse.github.io/installation-guides/)
+* MongoDB vlatest (https://docs.mongodb.com/manual/administration/install-community/)
 
 ## Setup
 Install the dependencies:
