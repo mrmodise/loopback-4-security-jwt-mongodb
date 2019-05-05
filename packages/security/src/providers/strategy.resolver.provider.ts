@@ -6,6 +6,7 @@ import {
 } from '@loopback/authentication';
 import {JWTStrategy} from '../auth-strategies';
 import {JWTAuthenticationBindings} from '../keys';
+
 export class StrategyResolverProvider
   implements Provider<JWTStrategy | undefined> {
   constructor(
