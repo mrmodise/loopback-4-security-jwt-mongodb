@@ -25,7 +25,7 @@
     "prettier:fix": "npm run prettier:cli -- --write",
     "tslint": "lb-tslint",
     "tslint:fix": "npm run tslint -- --fix",
-    "pretest": "npm run clean && npm run build && npm run docker:start",
+    "pretest": "npm run clean && npm run build",
     "pretest:ci": "npm run build",
     "test": "lb-mocha --allow-console-logs \"packages/*/dist/__tests__/**/*.js\"",
     "test:ci": "lb-mocha --allow-console-logs \"packages/*/dist/__tests__/**/*.js\"",
